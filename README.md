@@ -1,5 +1,5 @@
 # nchroot
-## Namespace chrooter for linux.
+* Namespace chrooter for linux.
 
 ## Prereq:
 
