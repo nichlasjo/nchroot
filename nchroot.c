@@ -55,7 +55,7 @@ if (argv[1]==NULL) {
      // Flag declaration, [insert getopt plz]
      int flags;
      flags = CLONE_NEWPID | CLONE_NEWIPC | CLONE_NEWNS |
-             CLONE_FILES | CLONE_NEWUTS CLONE_NEWCGROUP;
+             CLONE_FILES | CLONE_NEWUTS | CLONE_NEWCGROUP;
      // Childprocess with new PID/IPC/NS/ACL/UTS namespace
      pid = clone(childFunc, stack, flags | SIGCHLD, argv);
     // Wait for the child to terminate
