@@ -26,7 +26,9 @@ void detach() {
      umount("/proc");
      }
     // Mount proc
-     mount("proc", "proc", "proc", MS_NOSUID|MS_NOEXEC|MS_NODEV|MS_RDONLY, NULL );
+     mount("proc", "proc", "proc",
+             MS_RDONLY | MS_NOSUID | MS_NODEV | MS_NOEXEC,
+	     NULL );
     // Exec
 if (argv[2]!=NULL) {
      execvp(argv[2], &argv[2]);
