@@ -17,14 +17,15 @@
 #include <errno.h>
 #include <pwd.h>
 
-static int childFunc(void *arg) {
-
-     char **argv = arg;
-
     // Detach function
 void detach() {
      umount("/proc");
      }
+
+static int childFunc(void *arg) {
+
+     char **argv = arg;
+
     // Mount proc
      mount("proc", "proc", "proc",
              MS_RDONLY | MS_NOSUID | MS_NODEV | MS_NOEXEC,
