@@ -9,4 +9,4 @@ static:
 clean:
 	$(RM) nchroot nchroot.o
 run:
-	./nchroot / top -b -n 1
+	./nchroot / top
