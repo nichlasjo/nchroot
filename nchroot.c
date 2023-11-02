@@ -65,6 +65,6 @@ if (argv[1]==NULL) {
 while (waitpid(pid, &ret, 0) < 0 && errno == EINTR) {
      continue;
      return WIFEXITED(ret)?WEXITSTATUS(ret):EXIT_FAILURE;
-     }
      free(stack);
+     }
 }
